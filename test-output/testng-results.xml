@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-04-19T15:40:25 IST" name="Suite" finished-at="2022-04-19T15:40:44 IST" duration-ms="18604">
+    <groups>
+    </groups>
+    <test started-at="2022-04-19T15:40:25 IST" name="PCS" finished-at="2022-04-19T15:40:25 IST" duration-ms="14">
+    </test> <!-- PCS -->
+    <test started-at="2022-04-19T15:40:26 IST" name="User_Management_Test" finished-at="2022-04-19T15:40:44 IST" duration-ms="18478">
+      <class name="com.qa.pcs.test.UsermanagementPageTest">
+        <test-method is-config="true" signature="doApplicationLaunch(java.lang.String)[pri:0, instance:com.qa.pcs.test.UsermanagementPageTest@209da20d]" started-at="2022-04-19T15:40:26 IST" name="doApplicationLaunch" finished-at="2022-04-19T15:40:30 IST" duration-ms="4580" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doApplicationLaunch -->
+        <test-method is-config="true" signature="setUpUserManagement()[pri:0, instance:com.qa.pcs.test.UsermanagementPageTest@209da20d]" started-at="2022-04-19T15:40:30 IST" name="setUpUserManagement" finished-at="2022-04-19T15:40:31 IST" duration-ms="898" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpUserManagement -->
+        <test-method signature="userCreationTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qa.pcs.test.UsermanagementPageTest@209da20d]" started-at="2022-04-19T15:40:32 IST" name="userCreationTest" data-provider="getData" finished-at="2022-04-19T15:40:38 IST" duration-ms="5218" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[User]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[UserThree]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[user3@test.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Store user]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Srmtech]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userCreationTest -->
+        <test-method signature="userCreationTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.qa.pcs.test.UsermanagementPageTest@209da20d]" started-at="2022-04-19T15:40:38 IST" name="userCreationTest" data-provider="getData" finished-at="2022-04-19T15:40:43 IST" duration-ms="5450" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[User]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[UserFour]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[user4@test.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Store user]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Srmtech]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userCreationTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.pcs.test.UsermanagementPageTest@209da20d]" started-at="2022-04-19T15:40:43 IST" name="teardown" finished-at="2022-04-19T15:40:44 IST" duration-ms="851" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.qa.pcs.test.UsermanagementPageTest -->
+    </test> <!-- User_Management_Test -->
+  </suite> <!-- Suite -->
+</testng-results>

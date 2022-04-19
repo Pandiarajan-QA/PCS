@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+clas
+
+  <test thread-count="5" name="Test">
+    <classes>
+      
+     
+      <class name="com.qa.pcs.test.LoginPageTest">
+      <methods>
+        <include name="testMethod" />
+      </methods>
+      
+   	<me
+      </class>
+     
+      
+       <class name="com.qa.pcs.test.UsermanagementPageTest"/>
+
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
