@@ -8,7 +8,7 @@
 			class-name="com.qa.pcs.listner.AnnotationTransformer" />
 	</listeners>
 
-	<!-- <test name="Login_Test">
+	<test name="Login_Test">
 		<parameter name="browserName" value="chrome" />
 		<classes>
 			<class name="com.qa.pcs.test.LoginPageTest" />
@@ -22,7 +22,7 @@
 		<classes>
 			<class name="com.qa.pcs.test.ForgotPassowrdPageTest" />
 		</classes>
-	</test> -->
+	</test>
 
 	<test name="User_Management_Test">
 		<parameter name="browserName" value="chrome" />
