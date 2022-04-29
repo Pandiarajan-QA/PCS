@@ -83,7 +83,7 @@ public class BaseClass {
 			File destination = new File(path);
 			try {
 				FileUtils.copyFile(src, destination);
-				Log.info("Screenshot is taken");
+				Log.info("Screenshot is taken. Please check the respective folder");
 			} catch (IOException e) {
 				e.printStackTrace();
 				Log.error("Screenshot taken is failure");
