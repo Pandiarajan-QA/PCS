@@ -8,6 +8,7 @@ import org.testng.Assert;
 
 import com.qa.pcs.utils.Constants;
 import com.qa.pcs.utils.ElementUtil;
+import com.qa.pcs.utils.Log;
 import com.qa.pcs.utils.PropertyUtil;
 
 public class LoginPage {
@@ -45,8 +46,11 @@ public class LoginPage {
 		String pwd = getLoginCredentials().get(roleType).split(":")[1];
 
 		eutil.doSendKeys(username, uname);
+		Log.info("user name value is entered");
 		eutil.doSendKeys(password, pwd);
+		Log.info("Password value is entered");
 		eutil.doClickWhenReady(login_btn, 5);
+		Log.info("Login button is clicked");
 		return new UserManagementPage(driver);
 
 	}

@@ -24,23 +24,23 @@
   <body>
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
-      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <button class="button" id="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
         <span>All suites</span>
-        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
-          <img src="collapseall.gif" class="collapse-all-icon">
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
           </img> <!-- collapse-all-icon -->
         </a> <!-- collapse-all-link -->
       </div> <!-- navigator-suite-header -->
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+            <a href="#" class="navigator-link" panel-name="suite-Suite">
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,37 +50,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>D:\Selenium\PCS\testng.xml</span>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Suite">
+                    <span>D:\Selenium\PCS\testng1.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="testlist-Suite" class="navigator-link ">
-                    <span class="test-stats">2 tests</span>
+                  <a href="#" class="navigator-link " panel-name="testlist-Suite">
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="group-Suite" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="group-Suite">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="times-Suite" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="times-Suite">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="reporter-Suite" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="reporter-Suite">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="ignored-methods-Suite" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Suite">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="chronological-Suite" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="chronological-Suite">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -93,7 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.qa.pcs.test.UsermanagementPageTest" hash-for-method="userCreationTest([User, UserThree, user3@test.com, Store user, Srmtech, Email ID, pandiarajang@srmtech.com])">userCreationTest([User, UserThree, user3@test.com, Store user, Srmtech, Email ID, pandiarajang@srmtech.com])</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,13 +117,8 @@
                     </span>
                     <div class="method-list-content passed suite-Suite">
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.qa.pcs.test.UsermanagementPageTest" class="method navigator-link" hash-for-method="userCreationTest(User, UserThree, user3@test.com, Store user, Srmtech)">userCreationTest(User, UserThree, user3@test.com, Store user, Srmtech)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.qa.pcs.test.UsermanagementPageTest" class="method navigator-link" hash-for-method="userCreationTest(User, UserFour, user4@test.com, Store user, Srmtech)">userCreationTest(User, UserFour, user4@test.com, Store user, Srmtech)</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.qa.pcs.test.UsermanagementPageTest" hash-for-method="editUserTest([User, UserThree, user3@test.com, Store user, Srmtech, Email ID, pandiarajang@srmtech.com])">editUserTest([User, UserThree, user3@test.com, Store user, Srmtech, Email ID, pandiarajang@srmtech.com])</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -124,6 +133,27 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.qa.pcs.test.UsermanagementPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="userCreationTest([User, UserThree, user3@test.com, Store user, Srmtech, Email ID, pandiarajang@srmtech.com])">
+                  </a> <!-- userCreationTest([User, UserThree, user3@test.com, Store user, Srmtech, Email ID, pandiarajang@srmtech.com]) -->
+                  <span class="method-name">userCreationTest</span>
+                  <span class="parameters">([User, UserThree, user3@test.com, Store user, Srmtech, Email ID, pandiarajang@srmtech.com])</span>
+                  <div class="stack-trace">java.lang.AssertionError: User Creation is failed expected [true] but found [false]
+	at com.qa.pcs.test.UsermanagementPageTest.userCreationTest(UsermanagementPageTest.java:43)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -132,18 +162,10 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="userCreationTest(User, UserThree, user3@test.com, Store user, Srmtech)">
-                  </a> <!-- userCreationTest(User, UserThree, user3@test.com, Store user, Srmtech) -->
-                  <span class="method-name">userCreationTest</span>
-                  <span class="parameters">(User, UserThree, user3@test.com, Store user, Srmtech)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="userCreationTest(User, UserFour, user4@test.com, Store user, Srmtech)">
-                  </a> <!-- userCreationTest(User, UserFour, user4@test.com, Store user, Srmtech) -->
-                  <span class="method-name">userCreationTest</span>
-                  <span class="parameters">(User, UserFour, user4@test.com, Store user, Srmtech)</span>
+                  <a name="editUserTest([User, UserThree, user3@test.com, Store user, Srmtech, Email ID, pandiarajang@srmtech.com])">
+                  </a> <!-- editUserTest([User, UserThree, user3@test.com, Store user, Srmtech, Email ID, pandiarajang@srmtech.com]) -->
+                  <span class="method-name">editUserTest</span>
+                  <span class="parameters">([User, UserThree, user3@test.com, Store user, Srmtech, Email ID, pandiarajang@srmtech.com])</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -151,24 +173,22 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\Selenium\PCS\testng.xml</span>
+            <span class="header-content">D:\Selenium\PCS\testng1.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
+  &lt;parameter name=&quot;browserName&quot; value=&quot;chrome&quot;/&gt;
   &lt;listeners&gt;
-    &lt;listener class-name=&quot;com.qa.pcs.listner.AnnotationTransformer&quot;/&gt;
+    &lt;listener class-name=&quot;com.qa.pcs.listner.TestListner&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;1&quot; name=&quot;PCS&quot;&gt;
-  &lt;/test&gt; &lt;!-- PCS --&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;User_Management_Test&quot;&gt;
-    &lt;parameter name=&quot;browserName&quot; value=&quot;chrome&quot;/&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.qa.pcs.test.UsermanagementPageTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- User_Management_Test --&gt;
+  &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -180,10 +200,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">PCS (0 classes)</span>
-              </li>
-              <li>
-                <span class="test-name">User_Management_Test (1 class)</span>
+                <span class="test-name">Test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -213,16 +230,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'userCreationTest')
 data.setCell(0, 2, 'com.qa.pcs.test.UsermanagementPageTest')
-data.setCell(0, 3, 5450);
+data.setCell(0, 3, 6448);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'userCreationTest')
+data.setCell(1, 1, 'editUserTest')
 data.setCell(1, 2, 'com.qa.pcs.test.UsermanagementPageTest')
-data.setCell(1, 3, 5218);
+data.setCell(1, 3, 1159);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 10 seconds</span>
+              <span class="suite-total-time">Total running time: 7 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -249,26 +266,32 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">com.qa.pcs.test.UsermanagementPageTest</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
+              <div class="configuration-class before">
                 <span class="method-name">doApplicationLaunch(chrome)</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-test before -->
+              </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">setUpUserManagement</span>
-                <span class="method-start">4589 ms</span>
+                <span class="method-start">4312 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">userCreationTest(User, UserThree, user3@test.com, Store user, Srmtech)</span>
-                <span class="method-start">6939 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">userCreationTest([User, UserThree, user3@test.com, Store user, Srmtech, Email ID, pandiarajang@srmtech.com])</span>
+                <span class="method-start">6306 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">getScreenshot([TestResult name=userCreationTest status=FAILURE method=UsermanagementPageTest.userCreationTest([Lja...)</span>
+                <span class="method-start">12759 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="test-method">
-                <span class="method-name">userCreationTest(User, UserFour, user4@test.com, Store user, Srmtech)</span>
-                <span class="method-start">12166 ms</span>
+                <span class="method-name">editUserTest([User, UserThree, user3@test.com, Store user, Srmtech, Email ID, pandiarajang@srmtech.com])</span>
+                <span class="method-start">12975 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-test after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">17621 ms</span>
-              </div> <!-- configuration-test after -->
+              <div class="configuration-method after">
+                <span class="method-name">getScreenshot([TestResult name=editUserTest status=SUCCESS method=UsermanagementPageTest.editUserTest([Ljava.lang....)</span>
+                <span class="method-start">14135 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

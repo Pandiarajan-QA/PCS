@@ -10,17 +10,17 @@ public class storeMaintenancePageTest extends BaseClass {
 
 	@BeforeClass
 	public void storePageSetup() {
-
 		userpage=login.doLogin("adminUser");
 		store = userpage.navigateToStoreMaintenancePage();
+		sheetName="StoreManagement";
 
 	}
 
-	@Test
-	public void storeCreationTest() {
+	@Test(dataProvider = "getData")
+	public void storeCreationTest(String[]value) {
 
 		Assert.assertTrue(
-				store.doStoreCreation("SRMTest", "Ekkaduthangal", "9876543210", "123456", "Chennai", "test@test.com"),
+				store.doStoreCreation(value[0], value[1],value[2], value[3], value[4], value[5], value[6]),
 				"Store creation is failed");
 
 	}

@@ -14,6 +14,7 @@ public class StoreMaintenancePage {
 	private By add_btn = By.xpath("//button/i[@class='fas fa-plus-circle green_1']");
 	private By storeName = By.xpath("//label[text()='Store name']//following-sibling::input[@class='md-input']");
 	private By branchName = By.xpath("//label[text()='Branch name']//following-sibling::input[@class='md-input']");
+	private By storeCode=By.xpath("//label[text()='Store code']//following-sibling::input");
 	private By telephoneNo = By.xpath("//label[text()='Telephone no']//following-sibling::input[@class='md-input']");
 	private By postalCode = By.xpath("//label[text()='Postal code']//following-sibling::input[@class='md-input']");
 	private By address = By.xpath("//label[text()='Address']//following-sibling::input[@class='md-input']");
@@ -31,12 +32,13 @@ public class StoreMaintenancePage {
 
 	}
 	
-	public boolean doStoreCreation(String storeName, String branchName, String telephoneNo,String postalCode,String address, String EmailId) {
+	public boolean doStoreCreation(String storeName, String branchName,String storeCode, String telephoneNo,String postalCode,String address, String EmailId) {
 		
 		eutil.doClickWhenReady(add_btn, 5);
 		
 		eutil.doSendKeys(this.storeName, storeName);
 		eutil.doSendKeys(this.branchName, branchName);
+		eutil.doSendKeys(this.storeCode, storeCode);
 		eutil.doSendKeys(this.telephoneNo, telephoneNo);
 		eutil.doSendKeys(this.postalCode, postalCode);
 		eutil.doSendKeys(this.address, address);

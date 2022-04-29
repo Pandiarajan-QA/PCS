@@ -5,6 +5,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.qa.pcs.base.BaseClass;
+import com.qa.pcs.utils.Log;
 
 public class EnrollmentUploadPageTest extends BaseClass{
 	
@@ -13,6 +14,7 @@ public class EnrollmentUploadPageTest extends BaseClass{
 	public void EnrollmentPageSetup() {
 		
 		userpage=login.doLogin("storeUser");
+		Log.info("Login  method is invoked");
 		enroll=userpage.navigateToEnrollmentUploadPage();
 		
 	}

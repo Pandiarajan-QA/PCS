@@ -11,6 +11,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class ElementUtil {
 	
 	WebDriver driver;
+	int headValue;
+	
+	By table_headers_list=By.xpath("//table//thead//th");
+	By next_btn=By.xpath("//button[@aria-label='Next page']");
+	By previous_btn=By.xpath("//button[@aria-label='Previous page']");
 	
 	public ElementUtil(WebDriver driver) {
 
@@ -108,5 +113,109 @@ public boolean doFindThePresenceOfValueInGrid(By locator, String valueToCheck) {
 	
 	return status;
 }
+
+public int doFindPositionOfHeader(String headName) {
+
+	headValue = 0;
+	List<WebElement> headers = getElements(table_headers_list);
+	for (WebElement ele : headers) {
+		headValue++;
+		if (ele.getText().equals(headName)) {
+
+			System.out.println("The column" + headName + "is located at column of" + headValue);
+			break;
+		}
+
+	}
+	return headValue;
+
+}
+
+public By doFindColumnValuesOfOneHeader(String headName) {
+
+	headValue=doFindPositionOfHeader(headName);
+	By col_value_list = By.xpath("//table//tbody//tr//td[" + headValue + "]");
+	return col_value_list;
+}
+
+public int doFindNoOfPages() {
+
+	int no_of_pages = 1;
+
+	boolean next_btn_status = GetElement(next_btn).isEnabled();
+
+	if (!next_btn_status) {
+
+		no_of_pages = 1;
+	} else {
+		loop: for (int i = 0; i <= 1; i++) {
+			if (next_btn_status) {
+				doClickWhenReady(next_btn, 10);
+				no_of_pages++;
+
+			} else
+				break loop;
+			i = 0;
+			next_btn_status = GetElement(next_btn).isEnabled();
+
+		}
+
+		System.out.println("No.of.Pages in the list are:" + no_of_pages);
+	}
+
+	boolean prev_btn_status = GetElement(previous_btn).isEnabled();
+
+	loop: for (int i = 0; i <= 1; i++) {
+
+		if (prev_btn_status) {
+			doClick(previous_btn);
+		} else
+			break loop;
+
+		i = 0;
+		prev_btn_status = GetElement(previous_btn).isEnabled();
+	}
+	return no_of_pages;
+}
+
+public void doSelectColumn(String headName, String expectedColumnValue) {
+
+	By checkbox = By.xpath("(//td[text()='"+ expectedColumnValue +"']/parent::tr/child::td)[1]");
+
+	int no_of_pages = doFindNoOfPages();
+
+	List<WebElement> columnValues = getElements(doFindColumnValuesOfOneHeader(headName));
+	System.out.println("No.of.Elements in the list are" + columnValues.size());
+
+	outerloop: for (int i = 1; i <= no_of_pages; i++) {
+
+		try {
+
+			for (WebElement ele : columnValues) {
+				String value = ele.getText();
+				System.out.println(value);
+				if (value.equals(expectedColumnValue)) {
+
+					doClick(checkbox);
+					break outerloop;
+				}
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		try {
+
+			doClickWhenReady(next_btn, 10);
+			columnValues = getElements(doFindColumnValuesOfOneHeader(headName));
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+}
+
 
 }

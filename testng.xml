@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite" parallel="none">
-	<test thread-count="1" name="PCS"></test>
+	<test thread-count="5"  name="PCS"></test>
 	
 		<listeners>
-		<listener
-			class-name="com.qa.pcs.listner.AnnotationTransformer" />
+		<listener  class-name="com.qa.pcs.listner.AnnotationTransformer" />
+		<listener  class-name="com.qa.pcs.listner.TestListner" />
 	</listeners>
 
 	<test name="Login_Test">
@@ -17,12 +17,12 @@
 
 
 
-	<test name="Forgot_Passowrd_Test">
+	<!-- <test name="Forgot_Passowrd_Test">
 		<parameter name="browserName" value="chrome" />
 		<classes>
 			<class name="com.qa.pcs.test.ForgotPassowrdPageTest" />
 		</classes>
-	</test>
+	</test> -->
 
 	<test name="User_Management_Test">
 		<parameter name="browserName" value="chrome" />
@@ -31,7 +31,20 @@
 		</classes>
 	</test>
 	
-
+<test name="Store_Management_Test">
+		<parameter name="browserName" value="chrome" />
+		<classes>
+			<class name="com.qa.pcs.test.storeMaintenancePageTest" />
+		</classes>
+	</test>
+	
+	<test name="Enrollment_Upload_Test">
+		<parameter name="browserName" value="chrome" />
+		<classes>
+			<class name="com.qa.pcs.test.EnrollmentUploadPageTest" />
+		</classes>
+	</test>
+	
 	
 
 
