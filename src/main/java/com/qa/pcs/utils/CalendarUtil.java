@@ -1,5 +1,6 @@
 package com.qa.pcs.utils;
 
+<<<<<<< HEAD
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -22,5 +23,8 @@ public class CalendarUtil {
 		
 		
 	}
+=======
+public class CalendarUtil {
+>>>>>>> 6119fc469ad6fcea5576af36e888485d86157fd0
 
 }
